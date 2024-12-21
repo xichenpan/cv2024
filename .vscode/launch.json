@@ -1,0 +1,128 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+    
+    
+        
+    
+        {
+            "name": "Python 调试程序: train.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/data/home/xichenpan/miniforge3/envs/soda/bin/torchrun",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            },
+            "args": [
+                "--nproc-per-node=1",
+                "${workspaceFolder}/train.py",
+                "--run_name",
+                "test",
+                "--overwrite_output_dir",
+                "True",
+                "--base_dir",
+                "/fsx-project/xichenpan"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Python 调试程序: train_mini_torchds.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/data/home/xichenpan/miniforge3/envs/soda/bin/torchrun",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            },
+            "args": [
+                "--nproc-per-node=1",
+                "${workspaceFolder}/train_mini_torchds.py",
+            ]
+        },
+        {
+            "name": "Python 调试程序: curate_dataset.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/curate_dataset.py",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            }
+        },
+        {
+            "name": "Python 调试程序: app.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            }
+        },
+        {
+            "name": "Python 调试程序: eval_dreambench.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/data/home/xichenpan/miniforge3/envs/soda/bin/torchrun",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                // "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            },
+            "args": [
+                "--nproc-per-node=1",
+                "${workspaceFolder}/eval_dreambench.py"
+            ]
+        },
+        {
+            "name": "Python 调试程序: convert_vqav2.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/convert_vqav2.py",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            }
+        },
+        {
+            "name": "Python 调试程序: split_vqav2.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/split_vqav2.py",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            }
+        },
+        {
+            "name": "Python 调试程序: scratch.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scratch.py",
+            "console": "internalConsole",
+            "env": {
+                "OMP_NUM_THREADS": "12",
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2"
+            }
+        }
+    ]
+}

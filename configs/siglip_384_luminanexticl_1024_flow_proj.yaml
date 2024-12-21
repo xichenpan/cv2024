@@ -1,0 +1,33 @@
+_gradient_checkpointing: False
+encoder_id: "google/siglip-so400m-patch14-384"
+noise_scheduler_id: "Alpha-VLLM/Lumina-Next-SFT-diffusers"
+scheduler_id: "Alpha-VLLM/Lumina-Next-SFT-diffusers"
+unet_id: "Alpha-VLLM/Lumina-Next-SFT-diffusers"
+source_image_size: 384
+target_image_size: 1024
+per_device_train_batch_size: 1
+learning_rate: 0.001
+eval_steps: 2000
+save_steps: 2000
+warmup_steps: 10000
+logging_steps: 1
+diffusion_model: "luminanext-icl"
+loss_type: "flow"
+pooler_output: False
+num_pooled_tokens: 64
+optim: "adamw_torch"
+modules_to_freeze:
+  - "vae"
+  - "encoder"
+  - "transformer.text_encoder"
+  - "transformer.transformer"
+modules_to_unfreeze:
+  - "transformer.text_encoder.embed_tokens.new_embedding_module"
+# empty
+eval_dataset:
+
+train_datasets:
+  shutterstocki2i: -1
+  shutterstockt2i: -1
+gen_eval_dataset: "shutterstocki2i"
+ddp_find_unused_parameters: True

@@ -1,0 +1,13 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "debug.console.fontSize": 17,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "black-formatter.args": [
+        "--line-length=170"
+    ],
+    "terminal.integrated.scrollback": 100000000,
+    "editor.fontSize": 17,
+    "terminal.integrated.fontSize": 17
+}

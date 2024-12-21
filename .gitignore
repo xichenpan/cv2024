@@ -1,0 +1,24 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Weights & Biases 相关文件
+wandb/
+
+# all __pycache__, in different subfolders
+__pycache__/
+
+# gradio cache
+.gradio/
+
+*.npy
+*.png
